@@ -1,18 +1,18 @@
 #### Preamble ####
-# Purpose: Tests... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 26 September 2024 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Tests cleaned data to make every requirements is satisfied.
+# Author: Yi Tang
+# Date: 26 Novemeber 2024
+# Contact: zachayr.tang@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: No.
+# Any other information needed? No.
 
 
 #### Workspace setup ####
 library(tidyverse)
 library(testthat)
 
-analysis_data <- read_csv("data/02-analysis_data/analysis_data.csv", show_col_types = FALSE) |>
+clean_data <- read_csv("data/02-analysis_data/analysis_data.csv", show_col_types = FALSE) |>
   mutate(Theft_Status = as.integer(Theft_Status),
          Occurrence_Hour = as.integer(Occurrence_Hour))
 
